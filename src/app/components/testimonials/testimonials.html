@@ -1,0 +1,35 @@
+<section class="py-20 bg-[#ffdce8]">
+  <div class="container mx-auto px-4">
+    <h2 class="text-H800 text-primary text-center mb-12">
+      Trusted by Businesses Worldwide
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      @for (testimonial of testimonials(); track testimonial.id) {
+      <div class="bg-neutral p-6 rounded-lg shadow-md">
+        <div class="flex items-center mb-4">
+          <img
+            ngSrc="{{ testimonial.avatar }}"
+            alt="{{ testimonial.name }}"
+            width="48"
+            height="48"
+            class="rounded-full mr-4"
+          />
+          <div>
+            <h3 class="text-P250 text-primary">{{ testimonial.name }}</h3>
+            <p class="text-H200 text-secondary">
+              {{ testimonial.position }}, {{ testimonial.company }}
+            </p>
+          </div>
+        </div>
+        <p class="text-P200 italic">"{{ testimonial.quote }}"</p>
+        <div class="flex mt-4 text-yellow-400">
+          @for (star of [1,2,3,4,5]; track star) {
+          <span> @if (star <= testimonial.rating) { ★ } @else { ☆ } </span>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
