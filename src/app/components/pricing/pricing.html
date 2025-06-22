@@ -1,0 +1,324 @@
+<section class="py-20 bg-[#ffdce8]">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2
+        class="text-[1.72813rem] leading-[2rem] font-bold text-[#390546] mb-4"
+      >
+        Simple, Transparent Pricing
+      </h2>
+      <p class="text-[1rem] leading-[1.5rem] text-[#390546] max-w-2xl mx-auto">
+        No hidden fees. Pay only for what you use with volume discounts
+        automatically applied.
+      </p>
+    </div>
+
+    <!-- Billing Toggle -->
+    <div class="flex justify-center mb-12">
+      <div class="bg-[#de8dad] rounded-full p-1 inline-flex">
+        <button
+          (click)="billingPeriod.set('monthly')"
+          [class]="billingPeriod() === 'monthly' 
+                ? 'bg-[#c73d6c] text-white' 
+                : 'bg-transparent text-[#390546]'"
+          class="px-6 py-2 rounded-full font-medium transition-colors"
+        >
+          Monthly
+        </button>
+        <button
+          (click)="billingPeriod.set('annually')"
+          [class]="billingPeriod() === 'annually' 
+                ? 'bg-[#c73d6c] text-white' 
+                : 'bg-transparent text-[#390546]'"
+          class="px-6 py-2 rounded-full font-medium transition-colors"
+        >
+          Annually (20% off)
+        </button>
+      </div>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <!-- Starter Plan -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden border-2 border-[#de8dad]"
+      >
+        <div class="p-6">
+          <h3
+            class="text-[1.2rem] leading-[1.5rem] font-bold text-[#390546] mb-2"
+          >
+            Starter
+          </h3>
+          <p class="text-[0.83313rem] leading-[1.5rem] text-[#390546] mb-4">
+            Perfect for small businesses
+          </p>
+
+          <div class="mb-6">
+            <span
+              class="text-[2.07375rem] leading-[2.5rem] font-bold text-[#c73d6c]"
+            >
+              {{ billingPeriod() === 'monthly' ? '$19' : '$15' }}
+            </span>
+            <span class="text-[1rem] text-[#390546]">/month</span>
+          </div>
+
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >500 SMS included</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >Basic analytics</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >Email support</span
+              >
+            </li>
+          </ul>
+
+          <button
+            class="w-full bg-[#390546] hover:bg-[#c73d6c] text-white py-3 rounded-md font-bold transition-colors"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+
+      <!-- Popular Business Plan -->
+      <div
+        class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-[#c73d6c] transform md:scale-105 relative"
+      >
+        <div
+          class="absolute top-0 right-0 bg-[#c73d6c] text-white text-[0.69438rem] leading-[0.75rem] font-bold px-3 py-1 rounded-bl-lg"
+        >
+          MOST POPULAR
+        </div>
+        <div class="p-6">
+          <h3
+            class="text-[1.2rem] leading-[1.5rem] font-bold text-[#390546] mb-2"
+          >
+            Business
+          </h3>
+          <p class="text-[0.83313rem] leading-[1.5rem] text-[#390546] mb-4">
+            For growing teams
+          </p>
+
+          <div class="mb-6">
+            <span
+              class="text-[2.07375rem] leading-[2.5rem] font-bold text-[#c73d6c]"
+            >
+              {{ billingPeriod() === 'monthly' ? '$49' : '$39' }}
+            </span>
+            <span class="text-[1rem] text-[#390546]">/month</span>
+          </div>
+
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >2,500 SMS included</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >Advanced analytics</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >Priority support</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >API access</span
+              >
+            </li>
+          </ul>
+
+          <button
+            class="w-full bg-[#c73d6c] hover:bg-[#390546] text-white py-3 rounded-md font-bold transition-colors"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div
+        class="bg-white rounded-xl shadow-md overflow-hidden border-2 border-[#de8dad]"
+      >
+        <div class="p-6">
+          <h3
+            class="text-[1.2rem] leading-[1.5rem] font-bold text-[#390546] mb-2"
+          >
+            Enterprise
+          </h3>
+          <p class="text-[0.83313rem] leading-[1.5rem] text-[#390546] mb-4">
+            For large organizations
+          </p>
+
+          <div class="mb-6">
+            <span
+              class="text-[2.07375rem] leading-[2.5rem] font-bold text-[#c73d6c]"
+            >
+              Custom
+            </span>
+          </div>
+
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >10,000+ SMS</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >Dedicated account manager</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >24/7 premium support</span
+              >
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#c73d6c] mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-[0.83313rem] leading-[1.5rem] text-[#390546]"
+                >Custom integrations</span
+              >
+            </li>
+          </ul>
+
+          <button
+            class="w-full bg-[#390546] hover:bg-[#c73d6c] text-white py-3 rounded-md font-bold transition-colors"
+          >
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
