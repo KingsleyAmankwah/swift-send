@@ -1,0 +1,79 @@
+<footer class="bg-[#390546] text-white pt-12 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img
+            ngSrc="/assets/tek.png"
+            alt="SwiftSend Logo"
+            width="32"
+            height="32"
+            class="h-8 w-auto"
+          />
+          <span class="text-xl font-display font-bold">SwiftSend</span>
+        </div>
+        <p class="font-sans text-neutral mb-4">
+          Powerful SMS messaging solutions for businesses of all sizes.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-display font-bold text-lg mb-4">Quick Links</h3>
+        <ul class="space-y-2 font-sans">
+          @for (link of quickLinks(); track link.path) {
+          <li>
+            <a
+              [routerLink]="link.path"
+              class="text-neutral hover:text-white transition-colors"
+            >
+              {{ link.label }}
+            </a>
+          </li>
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-display font-bold text-lg mb-4">Contact Us</h3>
+        <address class="not-italic font-sans space-y-2 text-neutral">
+          <p>123 SMS Street</p>
+          <p>Melbourne, VIC 3000</p>
+          <p>
+            <a
+              href="mailto:info@swiftsend.com"
+              class="hover:text-white transition-colors"
+            >
+              infoswiftsend.com
+            </a>
+          </p>
+          <p>
+            <a
+              href="tel:+61234567890"
+              class="hover:text-white transition-colors"
+            >
+              +61 2 3456 7890
+            </a>
+          </p>
+        </address>
+      </div>
+    </div>
+
+    <div
+      class="border-t border-tertiary pt-6 flex flex-col md:flex-row justify-between items-center"
+    >
+      <p class="font-sans text-sm text-neutral">
+        &copy; {{ currentYear }} SwiftSend. All rights reserved.
+      </p>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        @for (link of legalLinks(); track link.path) {
+        <a
+          [routerLink]="link.path"
+          class="font-sans text-sm text-neutral hover:text-white transition-colors"
+        >
+          {{ link.label }}
+        </a>
+        }
+      </div>
+    </div>
+  </div>
+</footer>
