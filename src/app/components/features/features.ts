@@ -9,15 +9,22 @@ export class Features {
   features = signal([
     {
       icon: '⚡',
-      title: 'Lightning Fast',
+      title: 'Lightning Fast Delivery',
       description:
-        'Send messages instantly with our high-speed delivery network.',
+        'Send messages instantly with our high-speed global network. Average delivery time under 2 seconds.',
     },
     {
-      icon: '🌐',
-      title: 'Global Reach',
+      icon: '🛎️',
+      title: 'Instant Contact Support',
       description:
-        'Connect with customers worldwide with our extensive coverage.',
+        '24/7 live support with average response times under 5 minutes for all your urgent queries.',
+    },
+
+    {
+      icon: '👥',
+      title: 'Group Management',
+      description:
+        'Organize contacts into custom groups for targeted messaging and streamlined communication.',
     },
     {
       icon: '📊',
@@ -31,16 +38,30 @@ export class Features {
       description: 'Enterprise-grade security to protect your communications.',
     },
     {
-      icon: '🔄',
-      title: 'API Integration',
+      icon: '📤',
+      title: 'Bulk Upload',
       description:
-        'Seamlessly integrate with your existing systems and workflows.',
+        'Upload thousands of contacts at once via CSV or Excel files for mass messaging campaigns.',
     },
+
+    {
+      icon: '📝',
+      title: 'SMS Logs & Tracking',
+      description:
+        'Comprehensive message history with status updates (delivered, failed, read) for every SMS sent.',
+    },
+
     {
       icon: '💬',
       title: 'Bulk Messaging',
       description:
         'Engage in conversations with your customers, not just broadcasts.',
+    },
+    {
+      icon: '⏰',
+      title: 'Scheduled Messaging',
+      description:
+        'Plan campaigns in advance with our intuitive scheduling interface for perfect timing.',
     },
   ]);
 }
