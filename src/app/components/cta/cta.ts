@@ -8,17 +8,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       class="py-20 bg-gradient-to-r from-[#390546] to-[#c73d6c] text-white"
     >
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-H800 mb-6">
-          Ready to Transform Your Business Communication?
-        </h2>
-        <p class="text-P300 max-w-2xl mx-auto mb-8">
+        <h2 class="mb-6">Ready to Transform Your Business Communication?</h2>
+        <p class="max-w-2xl mx-auto mb-8">
           Join thousands of businesses already enjoying faster, more reliable
           SMS communication.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="tel:+233553157022"
-            class="flex items-center gap-2 px-4 rounded-md bg-white text-[#390546] hover:bg-[#ffdce8] text-lg font-sans  transition-colors"
+            class="flex items-center gap-2 px-4 py-4 rounded-md bg-white text-[#390546] hover:bg-[#ffdce8] text-lg font-sans  transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -1,10 +1,9 @@
-import { NgOptimizedImage } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'swift-footer',
-  imports: [RouterLink, NgOptimizedImage],
+  imports: [RouterLink],
   templateUrl: './footer.html',
   styles: `
     :host {

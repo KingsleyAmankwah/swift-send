@@ -1,16 +1,10 @@
-import { NgOptimizedImage } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'swift-header',
-  imports: [RouterLink, RouterLinkActive, NgOptimizedImage],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.html',
-  styles: `
-    :host {
-      display: block;
-    }
-  `,
 })
 export class Header {
   isMobileMenuOpen = signal(false);
