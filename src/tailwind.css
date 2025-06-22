@@ -1,0 +1,48 @@
+@theme {
+  /* Font Families */
+  --font-family-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-family-display: "Montserrat", "Poppins", sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Your Existing Color Scheme */
+  --color-primary: 57 5 70; /* #390546 */
+  --color-secondary: 199 61 108; /* #c73d6c */
+  --color-tertiary: 222 141 173; /* #de8dad */
+  --color-neutral: 255 220 232; /* #ffdce8 */
+  --color-black: 0 0 0; /* #000 */
+  --color-white: 255 255 255; /* #fff */
+}
+
+@utilities {
+  /* Headings */
+  .text-H900 {
+    font-size: 2.07375rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+  }
+  .text-H800 {
+    font-size: 1.72813rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+  /* ... add all other heading sizes ... */
+
+  /* Paragraphs */
+  .text-P500 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+  }
+  .text-P400 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+  /* ... add all other paragraph sizes ... */
+}

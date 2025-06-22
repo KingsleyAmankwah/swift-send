@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Home } from './home/home';
 
 @Component({
   selector: 'swift-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css',
+  imports: [Home],
+  template: `<swift-home /> `,
 })
 export class App {
   protected title = 'swift-sms';
