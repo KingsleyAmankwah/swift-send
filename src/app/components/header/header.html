@@ -1,0 +1,84 @@
+<header class="bg-[#390546] text-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <a routerLink="/" class="flex items-center gap-2">
+        <img
+          ngSrc="/assets/tek.png"
+          alt="SwiftSend Logo"
+          width="40"
+          height="40"
+          priority
+          class="h-10 w-auto"
+        />
+        <span class="text-2xl font-display font-bold tracking-tight"
+          >SwiftSend</span
+        >
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        @for (item of navItems(); track item.path) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="text-[#c73d6c] font-semibold"
+          class="text-lg font-sans hover:text-[#de8dad] transition-colors"
+        >
+          {{ item.label }}
+        </a>
+        }
+        <a
+          href="/contact"
+          class="bg-[#c73d6c] hover:bg-[#de8dad] text-white px-6 py-2 rounded-md font-sans font-medium transition-colors"
+        >
+          Contact Us
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        class="md:hidden text-white focus:outline-none"
+        (click)="toggleMobileMenu()"
+        aria-label="Toggle menu"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            [attr.d]="isMobileMenuOpen() ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    @if (isMobileMenuOpen()) {
+    <div class="md:hidden pb-4">
+      <div class="flex flex-col gap-4">
+        @for (item of navItems(); track item.path) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="text-[#c73d6c] font-semibold"
+          class="block text-lg font-sans hover:text-[#de8dad] transition-colors"
+          (click)="closeMobileMenu()"
+        >
+          {{ item.label }}
+        </a>
+        }
+        <a
+          href="/contact"
+          class="block bg-[#c73d6c] hover:bg-[#de8dad] text-white px-6 py-2 rounded-md font-sans font-medium text-center transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+    }
+  </div>
+</header>
