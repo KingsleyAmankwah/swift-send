@@ -16,9 +16,7 @@ export class Footer {
   currentYear = new Date().getFullYear();
 
   quickLinks = signal([
-    { path: '/features', label: 'Features' },
     { path: '/pricing', label: 'Pricing' },
-    { path: '/contact', label: 'Contact Us' },
     { path: '/blog', label: 'Blog' },
     { path: '/support', label: 'Support' },
   ]);
