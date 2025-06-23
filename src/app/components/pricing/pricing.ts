@@ -6,7 +6,7 @@ import { Component, signal } from '@angular/core';
   templateUrl: './pricing.html',
 })
 export class Pricing {
-  billingPeriod = signal<'monthly' | 'annually'>('monthly');
+  pricingType = signal<'service' | 'ownership'>('service');
 
   volumePricing = signal([
     { range: '1 - 1,000 messages', price: '$0.05' },

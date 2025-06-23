@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'swift-demo-video',
   imports: [],
   templateUrl: './demo-video.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DemoVideo {
-  showVideo = false;
+  protected showVideo = false;
 
-  playVideo() {
+  protected playVideo() {
     this.showVideo = true;
   }
 
-  closeVideo() {
+  protected closeVideo() {
     this.showVideo = false;
   }
 }

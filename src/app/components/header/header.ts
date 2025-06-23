@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'swift-header',
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Header {
   isMobileMenuOpen = signal(false);
